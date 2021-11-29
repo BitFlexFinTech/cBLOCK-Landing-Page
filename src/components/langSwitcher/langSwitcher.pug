@@ -1,0 +1,8 @@
+mixin langSwitcher(className)
+  div(class=`lang-switcher ${className}`)
+    img(src="./images/month.svg" class="lang-switcher--month")
+    div.lang-switcher--switch
+      label.lang-switcher--switch-label
+        input(type="checkbox" data-theme-switcher)
+        span.lang-switcher--switch-slider
+    span.lang-switcher--title Night mode

@@ -1,0 +1,20 @@
+-
+  var partners = [
+    { name: 'Cello', src: './images/cello-logo.png', lightSrc: './images/cello-logo-light.png', width: 133 },
+    { name: 'Good dollar', src: './images/good-dollar-logo.png', lightSrc: './images/good-dollar-logo-light.png', width: 146 },
+    { name: 'Ogue', src: './images/ogue-logo.png', lightSrc: './images/ogue-logo-light.png', width: 126 },
+    { name: 'Unifty', src: './images/unifty.png', width: 93 },
+    { name: 'United africa blockchain assotiation', src: './images/united-africa-logo.png', width: 148 },
+  ];
+
+section.section
+  div.container
+    h2.section-title.primary-text-fill.partners-title Partners
+    ul.partners-list
+      each partner in partners
+        li.partners-item
+          if (partner.lightSrc)
+            img.partner-logo.partner-logo--light(src=partner.lightSrc alt=partner.name width=partner.width)
+            img.partner-logo.partner-logo--dark(src=partner.src alt=partner.name width=partner.width)
+          else
+            img.partner-logo(src=partner.src alt=partner.name width=partner.width)

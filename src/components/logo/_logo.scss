@@ -1,0 +1,11 @@
+body[data-theme="dark"] .logo {
+  path {
+    fill: url(#logo-gradient-dark);
+  }
+}
+
+body[data-theme="light"] .logo {
+  path {
+    fill: #79C70A;
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "c-block",
+  "version": "1.0.0",
+  "description": "Landing template for C-Block",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "fontello": "bash ./fontello.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tigfamon/c-block.git"
+  },
+  "author": "tigfamon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tigfamon/c-block/issues"
+  },
+  "homepage": "https://github.com/tigfamon/c-block#readme",
+  "devDependencies": {
+    "autoprefixer": "10.4.0",
+    "browser-sync": "2.27.7",
+    "fontello-cli": "0.6.2",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "8.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-flatten": "0.4.0",
+    "gulp-pug": "5.0.0",
+    "gulp-sass": "5.0.0",
+    "gulp-uglify": "3.0.2",
+    "sass": "1.43.4"
+  }
+}

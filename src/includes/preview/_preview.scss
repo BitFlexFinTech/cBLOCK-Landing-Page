@@ -1,0 +1,130 @@
+.preview {
+  padding: 30px 0;
+  background: var(--preview-bg);
+}
+
+.preview-info {
+  position: relative;
+  text-align: center;
+
+  &--triangle {
+    position: absolute;
+    left: -1px;
+    width: 0;
+    height: 0;
+    border-width: 25px 0 25px 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--preview-bg);
+  }
+
+  &--label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding: 7px 18px 7px 25px;
+    border-top-right-radius: var(--default-border-radius);
+    border-bottom-right-radius: var(--default-border-radius);
+    background-color: #FBDE04;
+    font-weight: 700;
+    font-size: 14px;
+
+    &-fire {
+      margin-right: 10px;
+    }
+  }
+
+  &--title {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  &--link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 30px;
+    border-radius: 120px;
+    background: var(--primary-gradient);
+    color: var(--preview-btn-color);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background-color var(--default-transition-ms), color var(--default-transition-ms);
+
+    &-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-left: 20px;
+      border-radius: 50%;
+      background-color: var(--preview-btn-arrow-bg);
+      transition: transform var(--default-transition-ms), background-color var(--default-transition-ms);
+
+      path {
+        stroke: var(--preview-btn-arrow-color);
+      }
+    }
+
+    &:hover {
+      .preview-info--link-arrow {
+        transform: translateX(3px);
+      }
+    }
+  }
+}
+
+.preview-img {
+  display: none;
+}
+
+@include for-desktop-sm {
+  .preview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0;
+  }
+
+  .preview-container {
+    display: flex;
+    height: 100%;
+  }
+
+  .preview-info {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+
+    &--label {
+      font-size: 18px;
+    }
+
+    &--title {
+      margin-bottom: 30px;
+      font-size: 56px;
+    }
+  }
+
+  .preview-img {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-image: url("./images/preview-bg.png");
+    background-position: center left;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

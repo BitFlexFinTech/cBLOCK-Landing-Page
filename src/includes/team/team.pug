@@ -1,0 +1,47 @@
+-
+  var members = [
+    {
+      img: './images/team-1.png',
+      name: 'Tadii Tendayi',
+      position: 'Founder & CEO',
+      linkedin: '#',
+      twitter: '#',
+      medium: '#',
+      about: 'An adaptable and customer-oriented cryptopreneur who shares the Celo vision that values people and changing lives. Founder of BitFlex FinTech and a core contributor of Bankless Africa.'
+    },
+    {
+      img: './images/team-2.png',
+      name: 'Patrick Norton',
+      position: 'Co-Founder',
+      linkedin: '#',
+      twitter: '#',
+      medium: '#',
+      about: 'A crypto enthusiast with a passion for pets, humanity and the blockchain ecosystem.'
+    },
+  ];
+
+section.section
+  div.container
+    h1.section-title.primary-text-fill.team-title Team
+    p.team-subtitle The BitFlex FinTech Team combines passions from, Agriculture, sports, industry expertise & a proven record in finance, development, marketing & licensing.
+
+    ul.team-members
+      each member in members
+        li.team-member
+          div.team-member--photo
+            img(src=member.img)
+          h3.team-member--name.primary-text-fill= member.name
+          span.team-member--position= member.position
+          ul.team-member--social
+            li.team-member--social-item
+              a(href=member.linkedin target="_blank" class="team-member--social-link")
+                i.icon-linkedin
+            li.team-member--social-item
+              a(href=member.twitter target="_blank" class="team-member--social-link")
+                i.icon-twitter
+            li.team-member--social-item
+              a(href=member.medium target="_blank" class="team-member--social-link")
+                i.icon-medium
+          p.team-member--about= member.about
+
+

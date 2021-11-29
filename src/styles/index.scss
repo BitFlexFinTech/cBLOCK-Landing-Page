@@ -1,0 +1,91 @@
+@import "./mixins";
+@import "./normalize";
+@import "./fonts";
+@import "../pages/plug/plug";
+@import "../pages/landing/landing";
+@import "./fontello";
+
+:root {
+  --dark-bg: #373737;
+  --ligh-bg: #F5F5F5;
+  --default-border-radius: 40px;
+  --default-transition-ms: 0.2s;
+  --primary-gradient: linear-gradient(90deg, #28B800 -0.71%, #F5E30C 100%);
+  --primary-color: #9DDA46;
+}
+
+
+@mixin dark {
+  --body-bg: #000;
+  --card-bg: var(--dark-bg);
+  --card-text-color: #fff;
+  --advantage-img-bg: var(--primary-gradient);
+  --advantage-img-fill: #000;
+  --member-position-color: #fff;
+  --social-bg: linear-gradient(180deg, #373737 0%, #191919 100%);
+  --social-color: var(--primary-color);
+  --footer-bg: linear-gradient(180deg, #373737 0%, #191919 100%);
+  --footer-social-bg: linear-gradient(90deg, #28B800 -0.71%, #F5E30C 100%);
+  --footer-social-color: #191919;
+  --footer-copyright-color: #FFFFFF;
+  --step-icon-border-color: var(--primary-color);
+  --header-nav-link-color: var(--primary-color);
+  --header-nav-link-hover-bg: #262626;
+  --header-nav-border-color: #4B4B4B;
+  --switcher-border: var(--primary-gradient);
+  --switcher-bg: #000;
+  --theme-btn-bg: #000;
+  --desktop-nav-bg: #000;
+  --preview-btn-color: #000;
+  --preview-btn-arrow-bg: #000;
+  --preview-btn-arrow-color: #fff;
+  --preview-bg: #000;
+}
+
+@mixin light {
+  --body-bg: #fff;
+  --card-bg: var(--ligh-bg);
+  --card-text-color: #000;
+  --advantage-img-bg: #fff;
+  --advantage-img-fill: #79C70A;
+  --member-position-color: rgba(0, 0, 0, 0.6);
+  --social-bg: linear-gradient(90deg, #28B800 -0.71%, #F5E30C 100%);
+  --social-color: #fff;
+  --footer-bg: #F5F5F5;
+  --footer-social-bg: linear-gradient(90deg, #28B800 -0.71%, #F5E30C 100%);
+  --footer-social-color: #FFF;
+  --footer-copyright-color: rgba(0, 0, 0, 1);
+  --step-icon-border-color: #79C70A;
+  --header-nav-link-color: var(--primary-color);
+  --header-nav-link-hover-bg: #F0FFDA;
+  --header-nav-border-color: var(--primary-color);
+  --switcher-border: #E5E5E5;
+  --switcher-bg: #E5E5E5;
+  --theme-btn-bg: #FFF;
+  --desktop-nav-bg: #FFF;
+  --preview-btn-color: #fff;
+  --preview-btn-arrow-bg: #fff;
+  --preview-btn-arrow-color: #000;
+  --preview-bg: #F6F6F6;
+}
+
+body {
+  background-color: var(--body-bg);
+  &[data-theme="light"] {
+    @include light;
+  }
+  &[data-theme="dark"] {
+    @include dark;
+  }
+}
+
+.primary-text-fill {
+  background-image: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// fix fontello width
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  width: auto;
+}

@@ -1,0 +1,64 @@
+-
+  var links = [
+    {
+      to: "#",
+      name: "Audits",
+    },
+    {
+      to: "#",
+      name: "Platform",
+    },
+    {
+      to: "#",
+      name: "Product",
+    },
+    {
+      to: "#",
+      name: "Team",
+    },
+    {
+      to: "#",
+      name: "Blog",
+    },
+    {
+      to: "#",
+      name: "Privacy Policy",
+    },
+    {
+      to: "#",
+      name: "Terms of Service",
+    },
+    {
+      to: "#",
+      name: "Company",
+    },
+  ];
+
+header.header
+  div.container
+    div.header-content
+      include ../../components/logo/logo
+      +logo('header-logo')
+      button.header-burger
+        span
+      div.header-nav
+        button.header-nav--btn About us
+          i.icon-chevron
+        nav.header-nav--menu
+          each link in links
+            a(class="header-nav--link" href=link.to)=link.name
+      include ../../components/langSwitcher/langSwitcher
+      +langSwitcher('header-desktop--switcher')
+
+  div.header-menu-mobile
+    nav.header-menu-mobile--nav
+      each link in links
+        a(class="header-menu-mobile--nav-link" href=link.to)=link.name
+    div.header-menu-mobile--content
+
+      include ../../components/langSwitcher/langSwitcher
+      +langSwitcher('header-menu-mobile--switcher')
+
+      include ../../components/socialLinks/socialLinks
+      +socialLinks('header-menu-mobile--social-links')
+      p.header-menu-mobile--copyright © Copyright C-Block 2021

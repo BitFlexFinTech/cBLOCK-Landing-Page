@@ -1,0 +1,30 @@
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.social-link {
+  transition: var(--default-transition-ms) transform;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--footer-social-bg);
+    color: var(--footer-social-color);
+    transition: var(--default-transition-ms) color;
+  }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../includes/advantages/advantages";
+@import "../../includes/about/about";
+@import "../../includes/team/team";
+@import "../../includes/partners/partners";
+@import "../../includes/footer/footer";
+@import "../../includes/steps/steps";
+@import "../../includes/header/header";
+@import "../../includes/preview/preview";
+@import "../../components/socialLinks/socialLinks";
+@import "../../components/langSwitcher/langSwitcher";
+@import "../../components/logo/logo";
+
+.container {
+  @include for-desktop {
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  width: 95%;
+  margin: 0 auto;
+}
+
+.section {
+  @include for-desktop-sm {
+    margin-bottom: 150px;
+  }
+  margin-bottom: 60px;
+}
+
+.section-title {
+  @include for-desktop-sm {
+    font-size: 36px;
+  }
+
+  font-size: 26px;
+  text-align: center;
+  font-weight: 400;
+}
