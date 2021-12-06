@@ -20,17 +20,19 @@
     },
   ];
 
-section.section
+section.section.team
   div.container
-    h1.section-title.primary-text-fill.team-title Team
-    p.team-subtitle The BitFlex FinTech Team combines passions from, Agriculture, sports, industry expertise & a proven record in finance, development, marketing & licensing.
+    h2.section-title.team-title
+      span.primary-text-fill Team
+    p.team-subtitle The c-BLOCK Team combines passions from, Blockchain, Humanitarian Aid, Sports, industry expertise & a proven record in Finance, Marketing & Licensing.
 
     ul.team-members
       each member in members
         li.team-member
           div.team-member--photo
             img(src=member.img)
-          h3.team-member--name.primary-text-fill= member.name
+          h3.team-member--name
+            span.primary-text-fill= member.name
           span.team-member--position= member.position
           ul.team-member--social
             li.team-member--social-item

@@ -2,28 +2,6 @@ body[data-theme="light"] .step-icon-path {
   fill: #79C70A;
 }
 
-body[data-theme="dark"] {
-  @include for-desktop-sm {
-    .steps-circle--dark {
-      display: block;
-    }
-    .steps-circle--light {
-      display: none;
-    }
-  }
-}
-
-body[data-theme="light"] {
-  @include for-desktop-sm {
-    .steps-circle--dark {
-      display: none;
-    }
-    .steps-circle--light {
-      display: block;
-    }
-  }
-}
-
 .steps-title {
   @include for-desktop-sm {
     margin-bottom: 55px;
@@ -33,7 +11,7 @@ body[data-theme="light"] {
 
 .step-item {
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     .step-img {
       border: 3px solid var(--step-icon-border-color);
@@ -48,6 +26,7 @@ body[data-theme="light"] {
 
 .step-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
@@ -64,7 +43,7 @@ body[data-theme="light"] {
 }
 
 .step-name {
-  margin-left: 20px;
+  margin-top: 5px;
   color: var(--card-text-color);
   font-size: 16px;
   transition: var(--default-transition-ms) color;
@@ -72,17 +51,12 @@ body[data-theme="light"] {
 
 .step-arrow {
   &--mobile {
-    flex-basis: 100%;
-    margin-top: 10px;
-    margin-left: 24px;
+    display: block;
+    margin: 10px auto 0 auto;
   }
   &--desktop {
     display: none;
   }
-}
-
-.steps-circle {
-  display: none;
 }
 
 @include for-desktop-sm {
@@ -99,17 +73,8 @@ body[data-theme="light"] {
     background-repeat: no-repeat;
   }
 
-  .steps-circle {
-    position: absolute;
-    left: 0;
-    bottom: -15%;
-    overflow: hidden;
-
-    & > img {
-      position: relative;
-      left: -45%;
-      pointer-events: none;
-    }
+  .step-content {
+    flex-direction: row;
   }
 
   .step-arrow--mobile {
@@ -224,6 +189,29 @@ body[data-theme="light"] {
     &:nth-child(5) {
       top: -40px;
     }
+
+    // name center align
+    &:nth-child(1) .step-name {
+      left: -3%;
+    }
+
+    &:nth-child(2) .step-name {
+      left: -9%;
+    }
+
+    &:nth-child(3) .step-name {
+      left: -6%;
+    }
+
+    &:nth-child(4) .step-name {
+      left: -30%;
+      text-align: center;
+    }
+
+    &:nth-child(5) .step-name {
+      left: -35%;
+      text-align: center;
+    }
   }
 
   .step-content {
@@ -234,6 +222,7 @@ body[data-theme="light"] {
   .step-name {
     flex-basis: 100%;
     margin-left: 0;
+    position: relative;
   }
 }
 

@@ -1,14 +1,12 @@
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  position: relative;
   overflow: auto;
-  background: var(--body-bg);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   transition: background-color var(--default-transition-ms);
+  z-index: 10;
 
   &.open {
     height: 100vh;
+    background: var(--body-bg);
 
     .header-menu-mobile {
       display: block;
@@ -19,6 +17,8 @@
     .header-logo {
       display: none;
     }
+
+    padding-bottom: 80px;
   }
 
   .header-desktop--switcher, .header-nav {

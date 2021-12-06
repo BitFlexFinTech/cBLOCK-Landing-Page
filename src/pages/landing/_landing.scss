@@ -9,6 +9,7 @@
 @import "../../components/socialLinks/socialLinks";
 @import "../../components/langSwitcher/langSwitcher";
 @import "../../components/logo/logo";
+@import "../../includes/background/background";
 
 .container {
   @include for-desktop {
@@ -35,4 +36,23 @@
   font-size: 26px;
   text-align: center;
   font-weight: 400;
+}
+
+.preview, .advantages, .steps, .about, .about-wrap, .team, .partners, .footer {
+  position: relative;
+  z-index: 5;
+}
+
+.header {
+  z-index: 10;
+}
+
+.background-circle {
+  z-index: 2;
+}
+
+#bg-nodes {
+  & > div, & > canvas {
+    z-index: 1 !important;
+  }
 }

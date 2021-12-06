@@ -6,18 +6,17 @@
 @import "./fontello";
 
 :root {
-  --dark-bg: #373737;
-  --ligh-bg: #F5F5F5;
+  --ligh-bg: rgb(245,245,245, 0.49);
   --default-border-radius: 40px;
   --default-transition-ms: 0.2s;
   --primary-gradient: linear-gradient(90deg, #28B800 -0.71%, #F5E30C 100%);
   --primary-color: #9DDA46;
 }
 
-
 @mixin dark {
   --body-bg: #000;
-  --card-bg: var(--dark-bg);
+  --card-bg: rgba(55, 56, 57, 0.49);
+  --card-bg-before: linear-gradient(180deg, #373737 0%, #191919 100%);
   --card-text-color: #fff;
   --advantage-img-bg: var(--primary-gradient);
   --advantage-img-fill: #000;
@@ -39,12 +38,12 @@
   --preview-btn-color: #000;
   --preview-btn-arrow-bg: #000;
   --preview-btn-arrow-color: #fff;
-  --preview-bg: #000;
 }
 
 @mixin light {
   --body-bg: #fff;
   --card-bg: var(--ligh-bg);
+  --card-bg-before: #fbfbfb;
   --card-text-color: #000;
   --advantage-img-bg: #fff;
   --advantage-img-fill: #79C70A;
@@ -66,7 +65,6 @@
   --preview-btn-color: #fff;
   --preview-btn-arrow-bg: #fff;
   --preview-btn-arrow-color: #000;
-  --preview-bg: #F6F6F6;
 }
 
 body {

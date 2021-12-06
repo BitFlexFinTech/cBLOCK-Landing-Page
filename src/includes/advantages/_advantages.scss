@@ -2,16 +2,12 @@
 
 body[data-theme="dark"] {
   @include for-desktop-sm {
-    .advantages-bg--dark {
+    .advantages-bg--left-dark,
+    .advantages-bg--right-dark {
       display: block;
     }
-    .advantages-bg--light {
-      display: none;
-    }
-    .advantages-circle--dark {
-      display: block;
-    }
-    .advantages-circle--light {
+    .advantages-bg--left-light,
+    .advantages-bg--right-light {
       display: none;
     }
   }
@@ -19,16 +15,12 @@ body[data-theme="dark"] {
 
 body[data-theme="light"] {
   @include for-desktop-sm {
-    .advantages-bg--dark {
+    .advantages-bg--left-dark,
+    .advantages-bg--right-dark {
       display: none;
     }
-    .advantages-bg--light {
-      display: block;
-    }
-    .advantages-circle--dark {
-      display: none;
-    }
-    .advantages-circle--light {
+    .advantages-bg--left-light,
+    .advantages-bg--right-light {
       display: block;
     }
   }
@@ -48,7 +40,7 @@ body[data-theme="light"] {
   position: relative;
 }
 
-.advantages-bg, .advantages-circle {
+.advantages-bg {
   display: none;
 }
 
@@ -97,7 +89,7 @@ body[data-theme="light"] {
     width: 92px;
     height: 92px;
     border-radius: 50%;
-    background: var(--card-bg);
+    background: var(--card-bg-before);
     transition: inherit;
   }
 
@@ -139,30 +131,33 @@ body[data-theme="light"] {
   .advantages-bg {
     position: absolute;
     pointer-events: none;
+  }
 
-    &--dark {
-      bottom: -17%;
-      left: -10%;
+  .advantages-bg--right {
+    &-dark {
+      bottom: -25%;
+      right: -12%;
       width: 600px;
     }
 
-    &--light {
-      bottom: -12%;
-      left: 5%;
+    &-light {
+      bottom: -20%;
+      right: -3%;
       width: 295px;
     }
   }
 
-  .advantages-circle {
-    position: absolute;
-    right: 0;
-    bottom: -20%;
-    overflow: hidden;
+  .advantages-bg--left {
+    &-dark {
+      bottom: 0;
+      left: -25%;
+      width: 600px;
+    }
 
-    & > img {
-      position: relative;
-      right: -50%;
-      pointer-events: none;
+    &-light {
+      bottom: 10%;
+      left: -10%;
+      width: 295px;
     }
   }
 
@@ -218,21 +213,21 @@ body[data-theme="light"] {
       margin-bottom: 15px;
       font-size: 24px;
     }
-
-    &--description {
-      font-size: 18px;
-      line-height: 24px;
-    }
   }
 }
 
 @include for-desktop {
-  .advantages-bg {
-    &--dark {
-      left: -15%;
+  .advantages-bg--left {
+    &-dark {
+      bottom: 0;
+      left: -25%;
+      width: 600px;
     }
-    &--light {
-      left: 5%;
+
+    &-light {
+      bottom: 10%;
+      left: -10%;
+      width: 295px;
     }
   }
 }

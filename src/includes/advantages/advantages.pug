@@ -135,18 +135,20 @@
   ];
 
 section.section.advantages
-  div.advantages-circle.advantages-circle--light
-    img(src="./images/circle-gradient--light.png")
-  div.advantages-circle.advantages-circle--dark
-    img(src="./images/circle-gradient--dark.png")
   div.container.advantages-container
-    img.advantages-bg.advantages-bg--dark(src="./images/planet-bg--dark.png")
-    img.advantages-bg.advantages-bg--light(src="./images/planet-bg--light.png")
-    h2.section-title.primary-text-fill.advantages-title Ready to use
+    img.advantages-bg.advantags-bg--left.advantages-bg--left-dark(src="./images/planet-bg--dark.png")
+    img.advantages-bg.advantages-bg--left.advantages-bg--left-light(src="./images/planet-bg--light.png")
+
+    img.advantages-bg.advantags-bg--right.advantages-bg--right-dark(src="./images/planet-bg--dark.png")
+    img.advantages-bg.advantages-bg--right.advantages-bg--right-light(src="./images/planet-bg--light.png")
+
+    h2.section-title.advantages-title
+      span.primary-text-fill Ready to use
     ul.advantages-list
       each item in advantages
         li.advantages-item
           div.advantages-item--img!= item.img
 
-          h4.advantages-item--title.primary-text-fill= item.title
+          h4.advantages-item--title
+            span.primary-text-fill= item.title
           p.advantages-item--description= item.description

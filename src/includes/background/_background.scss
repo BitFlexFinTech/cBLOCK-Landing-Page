@@ -1,0 +1,80 @@
+body[data-theme="dark"] {
+  .background-circle--left-dark {
+    display: block;
+  }
+  .background-circle--left-light {
+    display: none;
+  }
+}
+
+body[data-theme="light"] {
+  .background-circle--left-dark {
+    display: none;
+  }
+  .background-circle--left-light {
+    display: block;
+  }
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+#bg-nodes {
+  height: 100vh;
+  width: 100%;
+  position: fixed !important;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.background-circle {
+  display: block;
+  position: fixed;
+  z-index: 2;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  img {
+    position: relative;
+    pointer-events: none;
+  }
+
+  &--left {
+    left: -200px;
+    bottom: -300px;
+
+    img {
+      height: 600px;
+    }
+
+    @include for-tablet {
+      left: -300px;
+      bottom: -300px;
+      img {
+        height: 800px;
+      }
+    }
+  }
+
+  &--right {
+    right: -300px;
+    top: -150px;
+    bottom: 0;
+
+    img {
+      height: 800px;
+    }
+
+    @include for-tablet {
+      right: -300px;
+      top: 0;
+      bottom: -180px;
+    }
+  }
+}
+
